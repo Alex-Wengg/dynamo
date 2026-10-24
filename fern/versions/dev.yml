@@ -196,6 +196,8 @@ navigation:
             path: ../pages-dev/kubernetes/fault-tolerance/request-migration.md
           - page: Request Rejection
             path: ../pages-dev/kubernetes/fault-tolerance/request-rejection.md
+          - page: Admission Control
+            path: ../pages-dev/kubernetes/fault-tolerance/admission-control.md
           - page: Graceful Shutdown
             path: ../pages-dev/kubernetes/fault-tolerance/graceful-shutdown.md
       - section: Auto Deployment
@@ -382,6 +384,8 @@ navigation:
                     path: ../pages-dev/developer-guide/knowledge-base/concepts/fault-tolerance/request-cancellation-architecture.md
                   - page: Request Rejection Architecture
                     path: ../pages-dev/developer-guide/knowledge-base/concepts/fault-tolerance/request-rejection-architecture.md
+                  - page: Admission Control Architecture
+                    path: ../pages-dev/developer-guide/knowledge-base/concepts/fault-tolerance/admission-control-architecture.md
                   - page: Graceful Shutdown Architecture
                     path: ../pages-dev/developer-guide/knowledge-base/concepts/fault-tolerance/graceful-shutdown-architecture.md
                   - page: Fault Tolerance Testing
@@ -399,6 +403,8 @@ navigation:
                     path: ../pages-dev/developer-guide/knowledge-base/modular-components/frontend/overview.md
                   - page: Protocol Field Handling
                     path: ../pages-dev/developer-guide/knowledge-base/modular-components/frontend/protocol-field-handling.md
+                  - page: OpenAPI Request-Contract Comparison
+                    path: ../pages-dev/developer-guide/knowledge-base/modular-components/frontend/openapi-request-contract-comparison.md
                   - page: KServe gRPC Frontend
                     slug: kserve-grpc-frontend
                     path: ../pages-dev/developer-guide/knowledge-base/modular-components/frontend/frontend-guide.md
@@ -927,6 +933,9 @@ navigation:
             skip-slug: true
             collapsed: true
             contents:
+              - page: MiniMax M3.1
+                path: ../pages-dev/recipes/model-recipes/minimax-m3-1.mdx
+                slug: minimax-m3-1
               - page: MiniMax M3
                 path: ../pages-dev/recipes/model-recipes/minimax-m3.mdx
                 slug: minimax-m3
@@ -1051,6 +1060,9 @@ navigation:
         path: ../pages-dev/reference/general/releases/release-history.mdx
         collapsed: true
         contents:
+          - page: Dynamo v1.6.0
+            path: ../pages-dev/reference/general/releases/dynamo-v1-6-0.mdx
+            slug: v1-6-0
           - page: Dynamo v1.5.0
             path: ../pages-dev/reference/general/releases/dynamo-v1-5-0.mdx
             slug: v1-5-0

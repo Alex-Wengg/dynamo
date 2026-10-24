@@ -156,7 +156,9 @@ All `helm install` commands can be customized with your own values file: `helm i
 
 <Warning>
 **Experimental. Development clusters only.** The unfinished DGDR v1beta2 schemas are disabled by
-default. To install them for API development, add
+default. The `1.2.1` chart shown above does not support this feature gate. To test the API before
+a supporting release is available, use a development chart built from the current `main` branch
+and add
 `--set "dynamo-operator.dgdrV1Beta2.enabled=true"` to the Helm command.
 The flag adds the v1beta2 `DynamoGraphDeploymentRequest` schema and installs the
 `DynamoGraphDeploymentRun` and `DynamoGraphDeploymentCandidate` Custom Resource Definitions
@@ -166,10 +168,6 @@ created with these schemas.
 Kubernetes persists Run and Candidate objects in etcd. Because the schemas are not finalized,
 later schema changes can make stored objects unreadable or prevent a CRD upgrade. Do not enable
 this API on production or shared clusters.
-
-Disabling the flag on a later Helm upgrade stops updating the experimental schemas but does not
-delete CRDs that were previously installed. Remove those CRDs manually only after confirming
-that they contain no resources.
 </Warning>
 
 <Tip>
@@ -286,7 +284,7 @@ helm install prometheus prometheus-community/kube-prometheus-stack \
   --set-json 'prometheus.prometheusSpec.probeNamespaceSelector={}'
 ```
 
-Then uncomment the `prometheusEndpoint` line in the Dynamo install command. The Dynamo operator automatically creates PodMonitors for its components. See [Metrics](../operations/observability.mdx) for dashboard setup and available metrics, and [Logging](observability.md) for the Grafana Loki + Alloy logging stack.
+Then uncomment the `prometheusEndpoint` line in the Dynamo install command. The Dynamo operator automatically creates PodMonitors for its components. See [Metrics](../operations/observability.mdx) for dashboard setup and available metrics, and [Logging](../../reference/observability/logging.mdx) for the Grafana Loki + Alloy logging stack.
 
 ### Shared Storage for Model Caching
 
